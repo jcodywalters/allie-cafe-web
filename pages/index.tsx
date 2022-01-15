@@ -8,7 +8,7 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Image
         className={styles.landingImage}
-        src="/allie-orange-juice-bg.png"
+        src="/allie-orange-juice-bg.jpeg"
         alt="background-image"
         layout="fill"
         objectFit="cover"
