@@ -2,6 +2,8 @@ import type { NextPage } from 'next'
 import Image from 'next/image'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+
 
 const Home: NextPage = () => {
   return (
@@ -30,28 +32,24 @@ const Home: NextPage = () => {
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Menu &rarr;</h2>
-            <p>View our menu made from the finest ingredients.</p>
-          </a>
+          <Link href="/menu">
+            <a className={styles.card}>
+              <h2>Menu &rarr;</h2>
+              <p>View our menu made from the finest ingredients.</p>
+            </a>
+          </Link>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
+          <a className={styles.card}>
             <h2>Gallery &rarr;</h2>
             <p>Photos of all the food we love to make!</p>
           </a>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
+          <a className={styles.card}>
             <h2>About &rarr;</h2>
             <p>Learn about the history of the cafe.</p>
           </a>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
+          <a className={styles.card}>
             <h2>Contact &rarr;</h2>
             <p>
               We love mail! Get in touch with us!
@@ -61,10 +59,7 @@ const Home: NextPage = () => {
       </main>
 
       <footer className={styles.footer}>
-          Made with love by Dad
-          {/* <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span> */}
+        Made with love by Dad
       </footer>
     </div>
   )
