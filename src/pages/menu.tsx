@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import { breakfastMenu } from "../fixtures";
+import { drinkMenu, foodMenu, dessertMenu } from "../fixtures";
 import styles from "../styles/Menu.module.css";
 import { MenuItem } from "../types";
 
@@ -10,9 +10,9 @@ function renderItemComponent(item: MenuItem) {
     // FIXME: How should keys be handled in a list
     // eslint-disable-next-line react/jsx-key
     <div className={styles["menu-item"]}>
-      <span className={styles["menu-item-price"]}>$3.25 / $4.00</span>
-      <div className={styles["menu-item-title"]}>Drip Coffee</div>
-      <div className={styles["menu-item-description"]}>12oz/16oz</div>
+      <span className={styles["menu-item-price"]}>{item.price}</span>
+      <div className={styles["menu-item-title"]}>{item.title}</div>
+      <div className={styles["menu-item-description"]}>{item.description}</div>
     </div>
   )
 }
@@ -39,13 +39,32 @@ const Menu: NextPage = () => {
         <div className={styles.block}>
           <div className={styles["block-content"]}>
             <div className={styles["menu-header"]}>
-              <h2 className={styles.title}>Breakfast</h2>
+              <h2 className={styles.title}>Drinks</h2>
             </div>
             <div className={styles["menu-items"]}>
               {
-                breakfastMenu.map((item) => renderItemComponent(item as any))
+                drinkMenu.map((item) => renderItemComponent(item as any))
               }
             </div>
+
+            <div className={styles["menu-header"]}>
+              <h2 className={styles.title}>Food</h2>
+            </div>
+            <div className={styles["menu-items"]}>
+              {
+                foodMenu.map((item) => renderItemComponent(item as any))
+              }
+            </div>
+
+            <div className={styles["menu-header"]}>
+              <h2 className={styles.title}>Dessert</h2>
+            </div>
+            <div className={styles["menu-items"]}>
+              {
+                dessertMenu.map((item) => renderItemComponent(item as any))
+              }
+            </div>
+
           </div>
         </div>
 

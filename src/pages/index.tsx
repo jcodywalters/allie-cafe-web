@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-          Delicious breakfast made with the best ingredients.
+          Breakfast served all day!
         </p>
 
         <div className={styles.grid}>
