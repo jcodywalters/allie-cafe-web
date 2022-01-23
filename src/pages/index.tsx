@@ -44,10 +44,12 @@ const Home: NextPage = () => {
             <p>Photos of all the food we love to make!</p>
           </a>
 
-          <a className={styles.card}>
-            <h2>About &rarr;</h2>
-            <p>Learn about the history of the cafe.</p>
-          </a>
+          <Link href="/about">
+            <a className={styles.card}>
+              <h2>About &rarr;</h2>
+              <p>Learn about the history of the cafe.</p>
+            </a>
+          </Link>
 
           <a className={styles.card}>
             <h2>Contact &rarr;</h2>
