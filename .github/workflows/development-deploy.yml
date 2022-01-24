@@ -1,25 +1,25 @@
+on: push
 name: Development Deploy workflow
 
-on: push
-
 jobs:
-  deploy:
+  deploy-dev:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v1
-      - name: Use Node.js 14.x
+
+      - name: Build
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
       - run: npm install
       - run: npm run build
-      - name: Deploy to netlify
+
+      - name: Deploy
         uses: netlify/actions/cli@master
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.DEV_NETLIFY_SITE_ID }}
         with:
           args: deploy --dir=.next --prod
-          secrets: '["DEV_NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
