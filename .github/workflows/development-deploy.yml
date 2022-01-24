@@ -24,4 +24,3 @@ jobs:
         with:
           args: deploy --dir=.next --prod --auth=${{ env.NETLIFY_AUTH_TOKEN }} --site=${{env.NETLIFY_SITE_ID}}
       - run: echo 'NETLIFY_AUTH_TOKEN- ${{ env.NETLIFY_AUTH_TOKEN }}'
-      - run: echo 'NETLIFY_SITE_ID- ${{ env.NETLIFY_SITE_ID }}'
