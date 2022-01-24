@@ -5,6 +5,7 @@
 
 A WIP project for a fictitious cafe
 
+Testing github action triggers
 
 --
 ### Running the server
