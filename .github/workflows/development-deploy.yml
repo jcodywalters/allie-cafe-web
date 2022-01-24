@@ -1,9 +1,6 @@
 name: Development Deploy workflow
 
-on:
-  pull_request:
-    branches:
-      - development
+on: push
 
 jobs:
   deploy:
