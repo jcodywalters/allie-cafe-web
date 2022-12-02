@@ -38,7 +38,7 @@ const Menu: NextPage = () => {
 
         <div className={styles.block}>
           <div className={styles["block-content"]}>
-          <h1>There is a bar. Your kids can play in the playroom with my brother he loves kids and he is six years old and me the chef i am eight years old and there is a nice warm fire place and a sofa i love to make pancakes.</h1>
+          <h1>There is a bar. Your kids can play in the playroom with my brother he loves kids and he is seven years old and me the chef i am nine years old and there is a nice warm fire place and a sofa i love to make pancakes.</h1>
           </div>
         </div>
 

@@ -1,6 +1,9 @@
 {
   "name": "allie-cafe-web",
   "private": true,
+  "engines": {
+    "node": ">=14.18.3"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
